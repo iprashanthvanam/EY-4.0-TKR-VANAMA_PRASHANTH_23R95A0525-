@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --slate-700: #334155;
+            --slate-800: #1e293b;
+            --slate-900: #0f172a;
+            --white: #ffffff;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-700: #374151;
+            --blue-500: #3b82f6;
+            --background-color: #f0f4f8;
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --rounded-lg: 0.5rem;
+            --rounded-xl: 0.75rem;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .header-section {
+            background-color: var(--slate-700);
+            color: var(--white);
+            width: 100%;
+            text-align: center;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .header-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+        }
+
+        .header-subtitle {
+            font-size: 1.125rem;
+            margin-top: 0.5rem;
+            opacity: 0.8;
+        }
+
+        .contact-form-container {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: var(--rounded-xl);
+            box-shadow: var(--shadow-xl);
+            width: 90%;
+            max-width: 40rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .form-field {
+            margin-bottom: 1rem;
+        }
+
+        .form-field label {
+            display: block;
+            color: var(--gray-700);
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .form-field input,
+        .form-field textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--gray-300);
+            border-radius: var(--rounded-lg);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .form-field input:focus,
+        .form-field textarea:focus {
+            outline: none;
+            border-color: var(--blue-500);
+            box-shadow: 0 0 0 2px var(--blue-500);
+        }
+
+        .form-field textarea {
+            min-height: 8rem;
+            resize: vertical;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .button {
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--rounded-lg);
+            font-weight: 600;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: background-color 0.2s;
+        }
+
+        .button.primary {
+            background-color: var(--slate-700);
+            color: var(--white);
+        }
+
+        .button.primary:hover {
+            background-color: var(--slate-800);
+        }
+
+        .button.secondary {
+            background-color: var(--gray-200);
+            color: var(--gray-700);
+        }
+
+        .button.secondary:hover {
+            background-color: var(--gray-300);
+        }
+
+        @media (max-width: 640px) {
+            .header-title {
+                font-size: 1.875rem;
+            }
+            .header-subtitle {
+                font-size: 1rem;
+            }
+            .contact-form-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <h1 class="header-title">Contact Us</h1>
+        <p class="header-subtitle">We'd love to hear from you! Please fill out the form below.</p>
+    </div>
+
+    <div class="contact-form-container">
+        <h2 class="form-title">Get in Touch</h2>
+
+        <form>
+            <div class="form-field">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Enter your full name">
+            </div>
+
+            <div class="form-field">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+
+            <div class="form-field">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number">
+            </div>
+            
+            <div class="form-field">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="Subject of your message">
+            </div>
+
+            <div class="form-field">
+                <label for="yourMessage">Your Message</label>
+                <textarea id="yourMessage" placeholder="Type your message here..."></textarea>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="button primary">
+                    Send Message
+                </button>
+                <button type="reset" class="button secondary">
+                    Clear Form
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
